@@ -45,4 +45,14 @@ public class MovimientoDinero {
     public void setUsuario(String usuario) {
         this.usuario = usuario;
     }
+
+    @java.lang.Override
+    public java.lang.String toString() {
+        return "MovimientoDinero{" +
+                "movimiento=" + movimiento +
+                ", montoPosNega=" + montoPosNega +
+                ", conceptoMovimiento='" + conceptoMovimiento + '\'' +
+                ", usuario='" + usuario + '\'' +
+                '}';
+    }
 }
