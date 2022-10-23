@@ -60,4 +60,14 @@ public class Empleado {
     public void setRolEmpleado(String rolEmpleado) {
         this.rolEmpleado = rolEmpleado;
     }
+
+    @java.lang.Override
+    public java.lang.String toString() {
+        return "Empledo{" +
+                "nombreEmpleado='" + nombreEmpleado + '\'' +
+                ", correoEmpleado='" + correoEmpleado + '\'' +
+                ", empresaPertenece='" + empresaPertenece + '\'' +
+                ", rolEmpleado='" + rolEmpleado + '\'' +
+                '}';
+    }
 }
