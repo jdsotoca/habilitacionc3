@@ -1,13 +1,28 @@
-package com.example.habilitacionc3;
+package com.example.habilitacionc3.entities;
 
-public class Empledo {
+import javax.persistence.*;
 
+@Entity
+@Table(name = "Empleado")
+public class Empleado {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
+    @Column(name = "nombre")
     private String nombreEmpleado;
+
+    @Column(name = "correo")
     private String correoEmpleado;
+    @Column(name = "empresa")
     private String empresaPertenece;
+    @Column(name = "rol")
     private String rolEmpleado;
 
-    public Empledo(String nombreEmpleado, String correoEmpleado, String empresaPertenece, String rolEmpleado) {
+    public Empleado() {
+    }
+
+    public Empleado(String nombreEmpleado, String correoEmpleado, String empresaPertenece, String rolEmpleado) {
         this.nombreEmpleado = nombreEmpleado;
         this.correoEmpleado = correoEmpleado;
         this.empresaPertenece = empresaPertenece;
