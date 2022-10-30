@@ -1,40 +1,24 @@
 package com.example.habilitacionc3.entities;
 
+import lombok.*;
+
 import javax.persistence.*;
 
 @Entity
-@Table(name = "movimientos")
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
+@ToString
 public class MovimientoDinero {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
-    @Column(name = "monto")
+    @Column(name = "id", nullable = false)
+    private Long id;
+
     private float montoMovimiento;
-    @Column(name = "concepto")
     private String conceptoMovimiento;
 
-    public MovimientoDinero() {
-    }
-
-    public MovimientoDinero(float montoMovimiento, String conceptoMovimiento) {
-        this.montoMovimiento = montoMovimiento;
-        this.conceptoMovimiento = conceptoMovimiento;
-    }
-
-    public float getMontoMovimiento() {
-        return montoMovimiento;
-    }
-
-    public void setMontoMovimiento(float montoMovimiento) {
-        this.montoMovimiento = montoMovimiento;
-    }
-
-    public String getConceptoMovimiento() {
-        return conceptoMovimiento;
-    }
-
-    public void setConceptoMovimiento(String conceptoMovimiento) {
-        this.conceptoMovimiento = conceptoMovimiento;
-    }
 
 }
