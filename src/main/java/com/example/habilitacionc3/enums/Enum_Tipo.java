@@ -7,3 +7,4 @@ public enum Enum_Tipo {
     Admin,
     Operario
 }
+
