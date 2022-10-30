@@ -2,22 +2,27 @@ package com.example.habilitacionc3.services;
 
 import com.example.habilitacionc3.entities.Empleado;
 import com.example.habilitacionc3.repositories.EmpleadoRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class EmpleadoService {
 
-    private EmpleadoRepository repository1;
+    @Autowired
+    EmpleadoRepository empleadoRepository;
 
-    public EmpleadoService(EmpleadoRepository repository){
-        this.repository1 = repository;
+    public void  crearActualizarEmpleado(Empleado empleado){
+        empleadoRepository.save(empleado);
     }
-    public List<Empleado> getEmpleado(){
-        return this.repository1.findAll();
+    public List<Empleado> verEmpleado(){
+        List<Empleado> empleados = new ArrayList<Empleado>();
+        empleados.addAll(empleadoRepository.findAll());
+        return empleados;
     }
-    public Empleado createEmpleado(Empleado newEmpleado){
-        return this.repository1.save(newEmpleado);
+    public void  eliminarEmpleado(Long id){
+        empleadoRepository.deleteById(id);
     }
 }
