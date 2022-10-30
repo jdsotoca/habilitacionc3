@@ -35,6 +35,10 @@ https://user-images.githubusercontent.com/103220491/197371764-50f36c6e-8682-4766
 | Crear servicios para la empresa                                                     | * El sistema permite consultar todas las empresas<br/> * El sistema permite consultar una sola empresa<br/> * El sistema permite crear una empresa<br/> * El sistema permite editar una empresa<br/> * El sistema permite eliminar una empresa     |
 | Crear servicios para el usuario                                                     | * El sistema permite consultar todos los usuarios<br/> * El sistema permite consultar un solo usuario<br/> * El sistema permite crear un usuario<br/> * El sistema permite editar un usuario<br/> * El sistema permite eliminar un usuario         |
 
-Video => Se crea controladores y devuelve 200 en la ruta /user de la tabla Empleado con los siguientes métodos
+Video => Se crea controladores y devuelve 200 en la ruta /enterprises de la tabla Empresa con los siguientes métodos.
+
+[recording-2022-10-30-17-46-58.webm](https://user-images.githubusercontent.com/103220491/198905492-5d450cff-1e9d-46aa-9334-43e5f82bfcce.webm)
+
+Video => Se crea controladores y devuelve 200 en la ruta /user de la tabla Empleado con los siguientes métodos.
 
 [recording-2022-10-30-17-35-15.webm](https://user-images.githubusercontent.com/103220491/198905091-a4a20472-6d12-4a77-a3b1-757e72027c1e.webm)
