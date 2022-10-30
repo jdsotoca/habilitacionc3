@@ -2,30 +2,34 @@ package com.example.habilitacionc3.controllers;
 
 import com.example.habilitacionc3.entities.Empresa;
 import com.example.habilitacionc3.services.EmpresaService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 public class EmpresaController {
 
-    EmpresaService service;
-    public EmpresaController(EmpresaService service){
-        this.service = service;
-    }
-    @GetMapping("/enterprise")
-    public List<Empresa> getEmpresa(){
+    @Autowired
+    EmpresaService empresaService;
 
-        return this.service.getEmpresa();
+    @GetMapping("/enterprises")
+    private List<Empresa> verEmpresa(){
+        return empresaService.verEmpresa();
     }
 
-    @PostMapping("/enterprise")
-    public Empresa createEmpresa(@RequestBody Empresa empresa){
-        return this.service.createEmpresa(empresa);
+    @PostMapping("/enterprises")
+    private void crearEmpresa(@RequestBody Empresa enterprises){
+        empresaService.crearActualizarEmpresa(enterprises);
+    }
 
+    @DeleteMapping("/enterprises/{id}")
+    private void eliminarEmpresa(@PathVariable("id") Long id){
+        empresaService.eliminarEmpresa(id);
+    }
+    @PutMapping("/enterprises")
+    public void editarEmpresa(@RequestBody Empresa enterprises){
+        empresaService.crearActualizarEmpresa(enterprises);
     }
 
 }
