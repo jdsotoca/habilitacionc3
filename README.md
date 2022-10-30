@@ -42,3 +42,8 @@ Video => Se crea controladores y devuelve 200 en la ruta /enterprises de la tabl
 Video => Se crea controladores y devuelve 200 en la ruta /user de la tabla Empleado con los siguientes métodos.
 
 [recording-2022-10-30-17-35-15.webm](https://user-images.githubusercontent.com/103220491/198905091-a4a20472-6d12-4a77-a3b1-757e72027c1e.webm)
+
+Video => Se crea controladores y devuelve 200 en la ruta /movements de la tabla Movimiento Dinero con los siguientes métodos.
+
+[recording-2022-10-30-17-55-32.webm](https://user-images.githubusercontent.com/103220491/198905834-2a2f0b7e-6ff6-4136-af0a-66af388c3e1e.webm)
+
