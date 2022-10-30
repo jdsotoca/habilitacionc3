@@ -1,5 +1,7 @@
 package com.example.habilitacionc3.entities;
 
+import com.example.habilitacionc3.enums.Enum_Movimiento;
+import com.example.habilitacionc3.enums.Enum_Tipo;
 import lombok.*;
 
 import javax.persistence.*;
@@ -18,7 +20,13 @@ public class MovimientoDinero {
     private Long id;
 
     private float montoMovimiento;
-    private String conceptoMovimiento;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "conceptoMovimiento")
+    private Enum_Movimiento conceptoMovimiento;
+
+    @OneToOne
+    private Empleado empleado;
 
 
 }
