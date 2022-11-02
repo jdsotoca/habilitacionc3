@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<form th:action="@{/user/actualizar/{id} (id = ${user.id})}" method="post">
+
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" th:field="${user.nombreEmpleado}">
+
+      <label for="correo">Correo del Empleado:</label>
+      <input type="email" id="correo" th:field="${user.correoEmpleado}">
+
+
+
+      <label for="rol">Rol del Empleado:</label>
+      <input type="text" id="rol" th:field="${user.rolEmpleado}">
+
+      <input type="submit" value="Actualizar Usuario">
+  </form>
+</body>
+</html>
